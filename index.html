@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>画像一覧</title>
+<style>
+  body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+  .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+  .item { width: calc(25% - 20px); background: white; border: 1px solid #ccc; padding: 10px; box-sizing: border-box; text-align: center; }
+  .item img { width: 100%; height: auto; cursor: zoom-in; transition: 0.3s; }
+  .item img:hover { opacity: 0.85; }
+  .no { font-weight: bold; margin-bottom: 4px; }
+  .comment { margin-top: 8px; font-size: 0.9em; color: #333; }
+  .overlay { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:none; align-items:center; justify-content:center; z-index:1000; }
+  .overlay img { max-width:90%; max-height:90%; }
+</style>
+</head>
+<body>
+<h1>画像一覧（クリックで拡大表示）</h1>
+<div class="grid">
+
+  <div class="item">
+    <div class="no">No.01</div>
+    <img src="01.jpg" alt="01.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.02</div>
+    <img src="02.jpg" alt="02.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.03</div>
+    <img src="03.jpg" alt="03.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.04</div>
+    <img src="04.jpg" alt="04.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.05</div>
+    <img src="05.jpg" alt="05.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.06</div>
+    <img src="06.png" alt="06.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.07</div>
+    <img src="07.png" alt="07.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.08</div>
+    <img src="08.png" alt="08.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.09</div>
+    <img src="09.jpg" alt="09.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.10</div>
+    <img src="10.jpg" alt="10.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.11</div>
+    <img src="11.jpg" alt="11.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.12</div>
+    <img src="12.jpg" alt="12.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.13</div>
+    <img src="13.jpg" alt="13.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.14</div>
+    <img src="14.png" alt="14.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.15</div>
+    <img src="15.png" alt="15.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.16</div>
+    <img src="16.png" alt="16.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.17</div>
+    <img src="17.jpg" alt="17.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.18</div>
+    <img src="18.jpg" alt="18.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.19</div>
+    <img src="19.jpg" alt="19.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.20</div>
+    <img src="20.jpg" alt="20.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.21</div>
+    <img src="21.jpg" alt="21.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.22</div>
+    <img src="22.jpg" alt="22.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.23</div>
+    <img src="23.jpg" alt="23.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.24</div>
+    <img src="24.jpg" alt="24.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.25</div>
+    <img src="25.jpg" alt="25.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.26</div>
+    <img src="26.jpg" alt="26.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.27</div>
+    <img src="27.jpg" alt="27.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.28</div>
+    <img src="28.jpg" alt="28.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.29</div>
+    <img src="29.jpg" alt="29.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.30</div>
+    <img src="30.jpg" alt="30.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.31</div>
+    <img src="31.jpg" alt="31.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.32</div>
+    <img src="32.png" alt="32.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.33</div>
+    <img src="33.jpg" alt="33.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.34</div>
+    <img src="34.jpg" alt="34.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.35</div>
+    <img src="35.jpg" alt="35.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.36</div>
+    <img src="36.jpg" alt="36.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.37</div>
+    <img src="37.jpg" alt="37.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.38</div>
+    <img src="38.jpg" alt="38.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.39</div>
+    <img src="39.jpg" alt="39.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.40</div>
+    <img src="40.jpg" alt="40.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.41</div>
+    <img src="41.jpg" alt="41.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.42</div>
+    <img src="42.jpg" alt="42.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.43</div>
+    <img src="43.jpg" alt="43.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.44</div>
+    <img src="44.jpg" alt="44.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.45</div>
+    <img src="45.jpg" alt="45.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.46</div>
+    <img src="46.jpg" alt="46.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.47</div>
+    <img src="47.jpg" alt="47.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.48</div>
+    <img src="48.jpg" alt="48.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.49</div>
+    <img src="49.png" alt="49.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.50</div>
+    <img src="50.jpg" alt="50.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.51</div>
+    <img src="51.jpg" alt="51.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.52</div>
+    <img src="52.png" alt="52.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.53</div>
+    <img src="53.png" alt="53.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.54</div>
+    <img src="54.jpg" alt="54.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.55</div>
+    <img src="55.png" alt="55.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.56</div>
+    <img src="56.png" alt="56.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.57</div>
+    <img src="57.jpg" alt="57.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.58</div>
+    <img src="58.jpg" alt="58.jpg">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.59</div>
+    <img src="59.png" alt="59.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+  <div class="item">
+    <div class="no">No.60</div>
+    <img src="60.png" alt="60.png">
+    <div class="comment">コメント：</div>
+  </div>
+
+</div>
+<div class="overlay" id="overlay" onclick="this.style.display='none'">
+  <img id="overlay-img" src="">
+</div>
+<script>
+  document.querySelectorAll('.item img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('overlay-img').src = img.src;
+      document.getElementById('overlay').style.display = 'flex';
+    });
+  });
+</script>
+</body>
+</html>
